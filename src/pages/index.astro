@@ -1,11 +1,62 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import SmileonthetilesLogo from "../assets/smileonthetiles-logo.svg"
 ---
 
 <Layout>
-	<Welcome />
+	<main>
+		<img src={SmileonthetilesLogo.src} width="80" height="80" alt="Smileonthetiles logo" />
+	<hgroup>
+		<h1>Smileonthetiles</h1>
+		<p>Plymouth's committed and legendary premiere nightlife photography</p>
+	</hgroup>
+	<hr>
+	<p>Smileonthetiles started on 24 September 2005 with an accidental photo taken in View 2 and the final photos were taken on the night of 4 December 2021.</p>
+	<p>Sadly on 28 April 2023, the face of Smileonthetiles, <a href="https://alex.christaki.uk/">Alex Christaki passed away</a>.</p>
+	<p>In its 16 year lifespan, Alex and his team took over <strong>1.83 million photos</strong> over <strong>2,350 nights</strong> covering <strong>213 venues</strong> across Plymouth, Torquay and various other locations across South Devon.</p>
+	<p>The Smileonthetiles site is officially closed but you can still email us on <a href="mailto:info@smileonthetiles.com">info@smileonthetiles.com</a>.</p>
+</main>
 </Layout>
+
+<style>
+	main {
+		padding: 20px;
+		max-width: 640px;
+	}
+
+	img {margin: 0 auto 10px;
+	display: block;}
+
+	hgroup {
+		max-width: 480px;
+		margin: 0 auto 30px;
+		line-height: 1.35;
+		text-align: center;
+		
+		p {
+			margin-top: .25em;
+			font-size: 1.5rem;
+			font-weight: 300;
+		}
+	}
+
+	hr {
+		width: 200px;
+		border-color: rgb(255 255 255 / 50%);
+		border-width: 1px 0 0;
+		margin-bottom: 30px;
+	}
+
+	h1 {
+		margin: 0;
+		padding: 0;
+		font-size: clamp(1.5rem, 10vw, 2.75rem);
+		font-weight: 700;
+	}
+
+	p {
+		margin-top: .75em;
+		font-size: 1.1rem;
+		font-weight: 400;
+	}
+</style>
